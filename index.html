@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rockecho</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wordmark">
+      <span class="wordmark-main">Rockecho</span>
+      <span class="wordmark-tag">sound, reflected</span>
+    </div>
+    <nav>
+      <button class="nav-link active" data-view="discover">Discover</button>
+      <button class="nav-link" data-view="library">Library</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Find the track. Hear the echo.</h1>
+      <p>Search, preview, and save songs — all in one place.</p>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search by title or artist…" />
+        <button id="search-btn">Search</button>
+      </div>
+    </section>
+
+    <section class="results" id="results">
+      <!-- Track cards injected by script.js -->
+    </section>
+  </main>
+
+  <div class="player" id="player">
+    <div class="player-info">
+      <span id="player-title">No track selected</span>
+      <span id="player-artist"></span>
+    </div>
+    <div class="player-controls">
+      <button id="play-btn">▶</button>
+      <span id="time-elapsed">0:00</span>
+      <input type="range" id="seek" min="0" max="100" value="0" />
+      <span id="time-total">0:00</span>
+    </div>
+    <div class="player-volume">
+      <span>🔊</span>
+      <input type="range" id="volume" min="0" max="100" value="70" />
+    </div>
+  </div>
+
+  <audio id="audio-el" preload="metadata"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
