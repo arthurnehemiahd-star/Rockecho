@@ -1,0 +1,4 @@
+.env
+launchpad.sqlite
+node_modules/
+uploads/
